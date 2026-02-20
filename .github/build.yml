@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  maestro-cloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'temurin'
+
+      - name: Grant execute permission to gradlew
+        run: chmod +x gradlew
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Upload and run Maestro tests on Cloud
+        uses: mobile-dev-inc/action-maestro-cloud@v1.9.8
+        with:
+          api-key: rb_DTRpJnBDGTUduce8kNlSxS0vrH7wSzckQB4PTCqrmu40NLQpW2489f5WahasXQimjh4iMEN76NHc8lfz1Oi3fvdVBrMwglWpqdi
+          project-id: proj_01kh2ervprff9bbfeet4e353p4
+          app-file: ifoodcompletao.apk
+          workspace: .maestro/
