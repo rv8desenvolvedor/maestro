@@ -1,0 +1,13 @@
+appId: com.qazandoqafood
+---
+- launchApp:
+    clearState: true
+
+- waitForAnimationToEnd
+- takeScreenshot: "abriu-o-app"
+
+- repeat:
+    while: 
+      notVisible: "Erro ao realizar login" #Enquanto não estiver visível o valor X
+    commands:
+      - tapOn: login-button

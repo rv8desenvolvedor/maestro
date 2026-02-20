@@ -1,0 +1,60 @@
+appId: com.qazandoqafood
+---
+- runFlow: login.yaml
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: "Selecione seu endereço..."
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: button1
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: "Pastelaria da Maria"
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: item-title
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    point: 93%,57%
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: open-cart-button
+
+- waitForAnimationToEnd:
+    timeout: 5000
+- extendedWaitUntil:
+    visible:
+      id: "confirm-order-button"
+    timeout: 10000
+- tapOn:
+    id: confirm-order-button
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- scrollUntilVisible:
+    element: "Forma de pagamento"
+    direction: DOWN
+    timeout: 10000
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: "Dinheiro"
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn:
+    id: do-order-button
+
+- waitForAnimationToEnd:
+    timeout: 3000
+- assertVisible: "Pedido realizado"

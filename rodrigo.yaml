@@ -1,0 +1,5 @@
+appId: com.qazandoqafood
+---
+- runFlow: subflows/sub.yaml
+- tapOn:
+    id: email

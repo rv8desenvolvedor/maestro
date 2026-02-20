@@ -1,0 +1,9 @@
+appId: com.qazandoqafood
+---
+- launchApp
+
+- waitForAnimationToEnd
+- takeScreenshot: "abriu-o-app"
+
+- tapOn:
+    id: password

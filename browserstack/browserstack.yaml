@@ -1,0 +1,10 @@
+appId: com.qazandoqafood
+---
+- launchApp:
+    clearState: true
+
+- waitForAnimationToEnd
+- takeScreenshot: "abriu-o-app"
+
+- tapOn:
+    id: email

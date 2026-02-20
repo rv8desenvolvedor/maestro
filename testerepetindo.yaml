@@ -1,0 +1,17 @@
+appId: com.qazandoqafood
+---
+- launchApp:
+    clearState: true
+
+- waitForAnimationToEnd
+- takeScreenshot: "abriu-o-app"
+
+- repeat:
+    times: 3
+    commands:
+      - tapOn: E-mail
+      - inputText: teste@teste.com
+      - tapOn: login-button
+
+    
+      
