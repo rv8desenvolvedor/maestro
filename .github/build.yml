@@ -28,4 +28,4 @@ jobs:
           api-key: rb_DTRpJnBDGTUduce8kNlSxS0vrH7wSzckQB4PTCqrmu40NLQpW2489f5WahasXQimjh4iMEN76NHc8lfz1Oi3fvdVBrMwglWpqdi
           project-id: proj_01kh2ervprff9bbfeet4e353p4
           app-file: ifoodcompletao.apk
-          workspace: .maestro/
+          workspace: maestro/
